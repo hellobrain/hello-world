@@ -1,4 +1,12 @@
-
+//less code
+function diffArray(arr1, arr2) {
+  var nArr = arr1.concat(arr2);
+  return nArr.filter(function(i){
+  if(arr1.indexOf(i) < 0 || arr2.indexOf(i) < 0){
+    return i;
+  }});
+}
+//same perf
 function diffArray(arr1, arr2) {
 console.time("test");
   var newArr = [];
