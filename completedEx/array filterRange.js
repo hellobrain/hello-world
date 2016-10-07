@@ -1,13 +1,13 @@
 var nums = [5,7,4,8,3,0];
 
-function filteredRange(arr, from, to){
+function filteredRange(arr, a, b){
 	var nArr = [];
-	for (i=0; 0<arr.length; i++){
-		if(from <= arr[i] <= to){
-			nArr.push(i);
+	for (var i=0; i < arr.length; i++){
+		if(a <= arr[i] && b >= arr[i]){
+			nArr.push(arr[i]);
 		} 
 	}
 	return nArr;
 }
 
-filteredRange(nums, 3,5);
+filteredRange(nums, 3,7);
