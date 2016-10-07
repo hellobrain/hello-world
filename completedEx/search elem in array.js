@@ -7,3 +7,4 @@ function find(arr,value){
 	}
 	return false;
 }
+find (fruits, "orange");
