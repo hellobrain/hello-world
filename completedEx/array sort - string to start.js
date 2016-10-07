@@ -1,3 +1,4 @@
+//l6 52min
 var arr = [1,2,3,5,7,8,3,4,6,"gerger","dddda"]
 
 arr.sort(function (a,b){
