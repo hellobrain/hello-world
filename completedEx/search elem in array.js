@@ -3,8 +3,12 @@ function find(arr,value){
 	for (i=0; 0<arr.length; i++){
 		if(arr[i] === value){
 			return [i];
+		} else if (i===arr.length){
+			return -1;
 		}
 	}
-	return false;
+	
 }
 find (fruits, "orange");
+
+//potencial infinity loop??
