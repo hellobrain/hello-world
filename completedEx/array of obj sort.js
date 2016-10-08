@@ -5,13 +5,8 @@ var vovochka = { name: 'Вовочка', age: 6 };
 var people = [ vasya , masha , vovochka ];
 
 people.sort(function (a,b){
-    return window[a] - window[b];
+    return a.age - b.age;
 });
 
-
-
-
-
 // теперь people: [vovochka, masha, vasya]
-//console.log(people[0].age) // 6 
-console.log(window.masha);
+console.log(people) // 6 
