@@ -3,7 +3,7 @@ function User(){
 	var surName = "";
 	
 	this.getFullName = function (){
-		console.log(firstName + " " + surName);
+		return firstName + " " + surName;
 	};
 	
 	this.setFirstName = function (text){
