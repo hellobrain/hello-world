@@ -3,9 +3,9 @@ var typer = (function(v) {
   	getType: function(v){
   		return {}.toString.call(v).slice(8, -1);},
     isNumber: function(v){
-    	return typeof v === "number"
-    	&& Number.isFinite(v)
-    	&& !(isNan(v));
+    	return typeof v !== "undefined" 
+    	&& typeof v.valueOf() == "number"
+    	&& !isNaN(v.valueOf()); // null throw error exception!!
     },
     isString: function(v){
     	return this.getType(v) === "String";
@@ -37,4 +37,4 @@ var typer = (function(v) {
   };
 }());
 
-typer.isNumber({});
+typer.isNumber(-1);
