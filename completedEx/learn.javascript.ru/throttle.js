@@ -1,36 +1,26 @@
-// ??
+// Algorithm:
+// перегружено? да!
+// --сохраняю аргументы
+// --прекращаю цикл выполнения функции
+
+// перегружено? нет!
+// --выполняю вызов функции
+// --ставлю статус перегружено
+// --запускаю таймер
+//   --срабатывание таймера
+//     --ставлю статус свободно
+//     --если есть аргументы - вызываю функцию обертку
+//       --перегружено? нет
+//       --выполняю функцию
+//       --ставлю статус перегружено
+//       --ставлю таймер 
+//     --стираю аргументы
 
 var log = "";
 var f = function(a) {
   log += a;
   console.log(log);
 };
-
-// function throttle (func, time){
-// 	var state = true,
-// 		savedArgs,
-// 		savedThis;
-	
-// 	return function (a){
-		
-// 		if (state){
-// 			state = false;
-// 			func.call(this, a);
-// 			var timer = setTimeout(function(){
-// 				if(savedArgs){
-// 					func.apply(savedThis, savedArgs);
-// 					savedArgs = savedThis = null;
-// 				}
-// 				state = true;
-// 			}, time);
-			
-// 		} else {
-// 			savedArgs = arguments;
-// 			savedThis = this;
-// 			return;
-// 		}
-// 	};
-// }
 
 function throttle(func, ms) {
 
