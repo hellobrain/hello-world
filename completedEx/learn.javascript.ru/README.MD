@@ -2,5 +2,5 @@
 <ul>
 <li>Throttle: http://learn.javascript.ru/task/throttle</li>
 <li>Solution: https://github.com/sensjs/learning/blob/master/completedEx/learn.javascript.ru/throttle.js</li>
-<hr>
+</ul>
 
