@@ -1,4 +1,4 @@
-var strings = ['кришна', 'кришна', 'харе', 'харе', 'харе', 'харе', 'кришна', 'кришна', '8-()' ];
+var strings = ['john', 'john', 'robert', 'robert', 'robert', 'robert', 'john', 'john', 'hello' ];
 
 function unique(str){
 	var arr = [];
@@ -13,4 +13,4 @@ function unique(str){
 
 
 
-console.log( unique(strings) ); // кришна, харе, 8-()
+console.log( unique(strings) ); // john, robert, hello
