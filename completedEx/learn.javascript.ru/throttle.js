@@ -1,3 +1,5 @@
+//http://learn.javascript.ru/task/throttle
+
 // Algorithm:
 // перегружено? да!
 // --сохраняю аргументы
