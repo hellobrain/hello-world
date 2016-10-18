@@ -1,4 +1,4 @@
-      // http://learn.javascript.ru/task/create-list<!DOCTYPE html>
+// http://learn.javascript.ru/task/create-list<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
