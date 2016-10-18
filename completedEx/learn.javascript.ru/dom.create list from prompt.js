@@ -1,4 +1,12 @@
-      // http://learn.javascript.ru/task/create-list
+      // http://learn.javascript.ru/task/create-list<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello list</title>
+  </head>
+  <body>
+    <div class="menu">
+    <script type="text/javascript">
       var string;
       var arr = [];
 
@@ -26,3 +34,7 @@
 
         menu.appendChild(fragment);
     }
+    </script>
+    </div>
+  </body>
+</html>
