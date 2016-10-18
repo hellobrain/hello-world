@@ -1,4 +1,5 @@
 // http://learn.javascript.ru/task/create-list<!DOCTYPE html>
+// Make it work stage
 <html>
   <head>
     <meta charset="utf-8">
