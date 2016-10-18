@@ -1,1 +1,1 @@
-# hello-world
+# repository for educational purposes
