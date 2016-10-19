@@ -1,4 +1,5 @@
-   // http://learn.javascript.ru/task/sort-table-performance
+   // copy from http://learn.javascript.ru/task/sort-table-performance
+   // for educational purposes
    /* создать массив из значений и ссылок, отсортировать, перевставить
       doRemove = предварительно вынуть из документа
     */
