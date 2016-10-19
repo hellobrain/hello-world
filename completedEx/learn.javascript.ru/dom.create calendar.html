@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+
+    td,
+    th {
+      border: 1px solid black;
+      padding: 3px;
+      text-align: center;
+    }
+
+    th {
+      font-weight: bold;
+      background-color: #E6E6E6;
+    }
+  </style>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+
+  <div id="calendar"></div>
+
+  <script>
+    function createCalendar(id, year, month) {
+      var elem = document.getElementById(id);
+      // correct month
+      month--;
+
+      var date = new Date(year, month);
+
+      // get correct day
+      var weekDay = date.getDay() === 0 ? 7 : date.getDay();
+	  var monthDay = date.getDate();
+	
+      // Create head of the table
+      var tableDays = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+      var table = document.createElement('table');
+      var thead = document.createElement('thead');
+      var tr = document.createElement('tr');
+      
+      for (var i = 0; i < 7; i++){
+          var th = document.createElement('th');
+          var txt = document.createTextNode(tableDays[i]);
+          th.appendChild(txt);
+          tr.appendChild(th);
+      }
+      
+      thead.appendChild(tr);
+      table.appendChild(thead);
+      
+      // Create body of table
+      for (i = 1; i <= 6; i++){
+        var row = table.insertRow(i);
+
+          for(var j = 0; j <= 6; j++){
+            var cell = row.insertCell(j);
+
+              if( (j + 1) >= weekDay && month === date.getMonth())  { // stop insert days if month get changed
+                  txt = document.createTextNode(monthDay);
+                  date.setDate(++monthDay); // change day of month to reach next month
+                  cell.appendChild(txt);
+           	 }
+
+           	 if(month !== date.getMonth()) i = 6; // skip last row if she is'nt needed
+          }
+          
+          weekDay = 1; // reset day of the week, to start inserting in each row with monday
+      }
+
+      elem.appendChild(table);
+      return table;
+    }
+
+    createCalendar('calendar', 2012, 9);
+  </script>
+</body>
+
+</html>
