@@ -1,0 +1,87 @@
+body {
+  padding-top: 20px;
+  background-color: silver;
+}
+
+.slider {
+  background-color: white;
+  padding: 10px;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.slider-images-wrap {
+  font-size: 0;
+  white-space: nowrap;
+  height: 529px;
+}
+
+.slider-transition {
+  transition: margin .5s ease-out;
+}
+
+.slider-images {
+  width: 940px;
+  height: 529px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.slider-navigation {
+  overflow: hidden;
+  width: 940px;
+  margin: 0 auto;
+  padding-top: 5px;
+}
+
+.slider a:link,
+.slider a:visited {
+  color: #333333;
+}
+
+.slider a:hover,
+.slider a:active {
+  color: #9e2020;
+}
+
+.slider-pager {
+  margin-top: 3px;
+  text-decoration: none;
+}
+
+.slider-pager-prev,
+.slider-pager-next {
+  float: left;
+  margin-right: 5px;
+}
+
+.slider-pagination {
+  list-style: none;
+  float: right;
+  margin: 6px 0 0;
+}
+
+.slider-pagination li {
+  float: left;
+  margin: 0 1px;
+}
+
+.slider-pagination li a {
+  float: left;
+  display: block;
+  width: 13px;
+  height: 0;
+  padding-top: 13px;
+  background-image: url('../img/pagination.png');
+  background-position: 0 0;
+  overflow: hidden;
+}
+
+.slider-pagination li a.active,
+.slider-pagination li a:hover.active {
+  background-position: 0 -13px;
+}
+
+.slider-pagination li a:hover {
+  background-position: 0 -26px;
+}
