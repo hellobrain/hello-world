@@ -18,7 +18,7 @@ function translatePigLatin(str) {
                 return str.substr(consonantCount, str.length) + str.substr(0, consonantCount) + 'ay';
             }
           
-        
+        //counting consonant
         } else if (vowels.indexOf(str[i]) == -1) {
             consonantCount++;
         }
