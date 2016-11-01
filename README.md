@@ -1,1 +1,1 @@
-# repository for educational purposes
+repository with completed exercises
