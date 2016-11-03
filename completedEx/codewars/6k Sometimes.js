@@ -18,4 +18,8 @@ function add (a, b) {
 
 var s = sometimes(add);
 
-s(10, 4);
+s(12, 6);
+s(1, 4);
+s(10, 3);
+s(2, 2);
+s(8, 5);
