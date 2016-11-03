@@ -11,3 +11,11 @@ function sometimes(fn) {
     }
   }
 }
+
+function add (a, b) {
+  return a + b;
+}
+
+var s = sometimes(add);
+
+s(10, 4);
