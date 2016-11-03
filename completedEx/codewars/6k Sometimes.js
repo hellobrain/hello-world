@@ -2,14 +2,14 @@ function sometimes(fn) {
   let i = 0;
   
   return function(a,b){
-    i++;
+  	i++;
     
-    if( (i <= 3) || (i >= 3 && i % 2 !== 0) ){
+    if(i < 3 || i % 2){
       return fn(a,b);
     } else {
-      return "hmm, I don't know!"
+      return "hmm, I don't know!";
     }
-  }
+  };
 }
 
 function add (a, b) {
