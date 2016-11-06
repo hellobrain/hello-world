@@ -1,5 +1,4 @@
 <!-- http://learn.javascript.ru/task/calendar-table -->
-
 <!DOCTYPE HTML>
 <html>
 
@@ -39,48 +38,54 @@
 
       // get correct day
       var weekDay = date.getDay() === 0 ? 7 : date.getDay();
-	  var monthDay = date.getDate();
-	
+      var monthDay = date.getDate();
+
       // Create head of the table
       var tableDays = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
       var table = document.createElement('table');
       var thead = document.createElement('thead');
       var tr = document.createElement('tr');
-      
-      for (var i = 0; i < 7; i++){
-          var th = document.createElement('th');
-          var txt = document.createTextNode(tableDays[i]);
-          th.appendChild(txt);
-          tr.appendChild(th);
+
+      for (var i = 0; i < 7; i++) {
+        var th = document.createElement('th');
+        var txt = document.createTextNode(tableDays[i]);
+        th.appendChild(txt);
+        tr.appendChild(th);
       }
-      
+
       thead.appendChild(tr);
       table.appendChild(thead);
-      
+
       // Create body of table
-      for (i = 1; i <= 6; i++){
-        var row = table.insertRow(i);
+      rowLoop:
+        for (i = 1; i <= 6; i++) {
+          var row = table.insertRow(i);
 
-          for(var j = 0; j <= 6; j++){
-            var cell = row.insertCell(j);
+          cellLoop:
+            for (var j = 0; j <= 6; j++) {
+              var cell = row.insertCell(j);
 
-              if( (j + 1) >= weekDay && month === date.getMonth())  { // stop insert days if month get changed
-                  txt = document.createTextNode(monthDay);
-                  date.setDate(++monthDay); // change day of month to reach next month
-                  cell.appendChild(txt);
-           	 }
+              // (j + 1) = make easy comparison with corrected day of week 
+              if ((j + 1) >= weekDay && month === date.getMonth()) { // stop insert data if month get changed
+                txt = document.createTextNode(monthDay);
+                date.setDate(++monthDay); // change day of month to reach next month
+                cell.appendChild(txt);
+              }
 
-           	 if(month !== date.getMonth()) i = 6; // skip last row if she is'nt needed
-          }
-          
+              // skip last row if it is'nt needed
+              if (month !== date.getMonth() && row.cells.length === 7) {
+                break rowLoop;
+              };
+            }
+
           weekDay = 1; // reset day of the week, to start inserting in each row with monday
-      }
+        }
 
       elem.appendChild(table);
       return table;
     }
 
-    createCalendar('calendar', 2012, 9);
+    createCalendar('calendar', 2012, 8);
   </script>
 </body>
 
