@@ -77,8 +77,9 @@
                 break rowLoop;
               };
             }
-
-          weekDay = 1; // reset day of the week, to start inserting in each row with monday
+          
+            // set to monday, to start inserting data in each next row
+            if (weekDay !== 1) weekDay = 1;
         }
 
       elem.appendChild(table);
