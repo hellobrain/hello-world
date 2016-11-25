@@ -19,7 +19,7 @@ function generateFibArray(num) {
 }
 
 function sumFibs(num) {
-	if(num === 1) return 1;
+	if(num <= 1) return num;
 	
 	return generateFibArray(num).reduce((p, n, i, arr) => {
       
